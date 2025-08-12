@@ -127,20 +127,5 @@
       document.body.appendChild(script);
 
     </script>
-    <script>
-  async function pingInitByRid() {
-    const url = "https://twodrpgbackend2025.onrender.com/api/initByRid";
-    const res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ rid: "TEST_RID_12345" })
-    });
-    const txt = await res.text();
-    console.log("[PING] status", res.status, "body", txt);
-    alert("PING " + res.status + ": " + txt.slice(0,120));
-  }
-</script>
-<button onclick="pingInitByRid()" style="position:fixed;top:8px;right:8px;z-index:9999">PING initByRid</button>
-
   </body>
 </html>
